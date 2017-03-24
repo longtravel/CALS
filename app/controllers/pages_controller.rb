@@ -1,4 +1,10 @@
+require 'hypernova'
+
 class PagesController < ApplicationController
-  def index
-  end
+    around_action :hypernova_render_support
+    
+    def index
+    @liked =true
+    @title = 'Server Side Rendering'
+    end
 end

@@ -16,7 +16,7 @@ gem 'responders'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap'
-
+gem 'hypernova'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0.beta1'
 # Use Puma as the app server
