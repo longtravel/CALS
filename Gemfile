@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Environment variables configuration
-gem 'dotenv-rails', '~> 2.2', groups: [:development, :test]
+gem 'dotenv-rails', '~> 2.2', groups: [:development, :test, :aws_dev]
 
 gem 'foreman'
 gem 'rspec-rails'
@@ -52,6 +52,12 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'vcr'
   gem 'webmock'
+end
+
+group :test do
+ gem "simplecov", require: false
+ gem "codeclimate-test-reporter", "~> 1.0.0"
+
 end
 
 group :development do

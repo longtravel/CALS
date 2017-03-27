@@ -12,7 +12,7 @@ RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 # install nodejs and npm
 RUN apt-get install -y nodejs
 
-RUN mkdir /var/www; cd /var/www; 
+RUN mkdir /var/www; cd /var/www;
 
 # clone CALS
 RUN git clone -b aws_dev https://github.com/ca-cwds/CALS.git /var/www/cals
@@ -25,8 +25,8 @@ RUN bundle install
 #run node package installer
 RUN npm install
 
-# build assets using webpack
-RUN npm run build-no-watch
+# compile assets
+RUN rails assets:precompile
 
 ENV BASE_CALS_API_URL=http://devmockapi1.cs-cals.com:3001/v1
 

@@ -23,11 +23,11 @@
   },
   "scripts": {
     "lint": "eslint app/;exit 0;",
-    "spec": "rspec spec; open reports/rspec_test_results.txt;",
+    "spec": "rspec spec; open reports/rspec_test_results.txt; open coverage/index.html;",
     "compile-webpack": "rails -g webpacker:compile",
     "dev-build": "./bin/server",
     "dev": "foreman start -f Procfile.dev;",
-    "karma": "cd config;karma start karma.conf.js; open ../reports/karma_test_results.html;",
+    "karma": "cd config;karma start karma.conf.js; open ../reports/karma_test_results.html; open ../coverage/index.html;",
     "tests": "npm run spec; npm run karma;"
   },
   "devDependencies": {

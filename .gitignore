@@ -14,7 +14,8 @@
 /reports
 /reports/*
 /spec/examples.txt
-
+/coverage
+/coverage/*
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
