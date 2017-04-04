@@ -1,3 +1,5 @@
+<a href="http://codeclimate.com/github/ca-cwds/CALS"><img src="http://codeclimate.com/github/ca-cwds/CALS/badges/gpa.svg" /></a>
+
 # README
 
 A React front end with a Rails backend serving up assets through webpacker for the state of california CWDS project.

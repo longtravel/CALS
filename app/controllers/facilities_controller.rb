@@ -3,7 +3,7 @@ class FacilitiesController < ApplicationController
   include FacilitiesHelper
 
   def index
-    @facilities = fetch_facilities
+    @facilities = Facility.all
     respond_to do |format|
       format.html
       format.js
