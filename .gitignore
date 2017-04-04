@@ -10,6 +10,9 @@
 # Ignore .env file containing environment variables
 .env
 
+#Ignore redis dumps
+dump.rdb
+
 # Ignore test reports
 /reports
 /reports/*

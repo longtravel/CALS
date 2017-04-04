@@ -9,7 +9,6 @@ import { Router, Route, browserHistory } from 'react-router';
 export default class Facilities extends React.Component {
   componentDidMount() {
     var fac_nbr = parseInt(this.props.params.fac_nbr)
-debugger;
        fetch(`/facilities/${fac_nbr}`, {
            mode: "no-cors",
            method: "GET",
@@ -31,7 +30,6 @@ debugger;
     render() {
         let propsData = this.props.location.state.data;
      //items.each do |item| <Link to facility/fac_nbr compononet facilities params = item>
-debugger;
         return (
             <div className="main_page">
                 <div className="header_cwds col-xs-12 col-sm-12 col-md-12 col-lg-12">

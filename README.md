@@ -17,11 +17,11 @@ Make sure XCode is installed.
 ## initialization
 
 run the command:
-`npm run dev`
+`npm run dev-build`
 
 from the root folder. This will perform the following actions:
  - `bundle install`
- - `npm install `
+ - `yarn install packages`
  - `compiles webpack assets`
  - `starts assets`
  - `starts rails server`
@@ -35,15 +35,34 @@ to view the facilities demo webapp, go to
 assets compiled via webpack live on:
 `localhost:8080`
 
+## REDIS
+NOTE: it is also important to also have redis server running. Start server with 
+`redis-server`
+
+if redis is not installed, enter the following command from terminal:
+`brew install redis `
+
+this command will install all necessary redis files. 
+
+
 ## Testing
 
-### Karma details/instructions
+to run linting on the project:
+
+`npm run lint`
+
+### run all tests instructions
+to run all tests and output code coverage:
+
+`npm run all-tests`
+
+### Karma tests instructions
 To run the karma tests, from the root folder run:
 `npm run karma`
 
 this command will run the automated tests and open a browser with the results.
 
-### Rspec details/instructions
+### Rspec tests instructions
  rspec tests live in the root spec/ folder. you can run all tests with either of the following commands
 
  `npm run spec`

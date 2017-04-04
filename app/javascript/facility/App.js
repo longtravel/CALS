@@ -5,7 +5,7 @@ import FacilityList from './facility_list.jsx';
 export default class App extends React.Component {
   constructor() {
     super();
-    this.state = {items: []};
+    this.state = { items: [] };
   }
   componentDidMount() {
     fetch('/facilities', {
@@ -15,21 +15,20 @@ export default class App extends React.Component {
         Accept: 'application/json',
       },
     })
-    .then(
-      response => response.json())
-      .then((response) => {
-        return this.setState({ items: response});
-
-      })
-      .catch(error => {
-      });
-    }
-    render() {
-      const itemsList = this.state.items.map(item => <FacilityList key={item.fac_nbr} {...item} />);
-      return (
-        <div className="block">
-        {itemsList}
-        </div>
-      );
-    }
+    .then(response => response.json())
+    .then((response) => {
+      return this.setState({ items: response });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }
+  render() {
+    const itemsList = this.state.items.map(item => <FacilityList key={item.fac_nbr} {...item} />);
+    return (
+      <div className="block">
+        {itemsList}
+      </div>
+    );
+  }
+}

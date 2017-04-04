@@ -1,9 +1,11 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.js';
-import Facilities from './facilities_main.jsx';
-import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
 
+import { Router, Route, browserHistory } from 'react-router';
+
+import App from './App';
+import Facilities from './facilities_main.jsx';
 
 function hashLinkScroll() {
   const { hash } = window.location;
@@ -22,10 +24,11 @@ function hashLinkScroll() {
 
 ReactDOM.render(
   <Router
-  onUpdate={hashLinkScroll}
-  history={browserHistory}>
-  <Route path="/facilities" component={App} />
-  <Route path="/facilities/:fac_nbr" component={Facilities} />
+    onUpdate={hashLinkScroll}
+    history={browserHistory}
+  >
+    <Route path="/facilities" component={App} />
+    <Route path="/facilities/:fac_nbr" component={Facilities} />
   </Router>,
   document.getElementById('root'),
 );

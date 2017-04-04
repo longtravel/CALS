@@ -24,14 +24,15 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './../test/javascript/**/*_tests.js': ['webpack']
+      './../test/javascript/**/*_tests.js': ['webpack', 'coverage']
+
     },
 
     webpack:{ module: webpackConfig.module},
 
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress','html'],
+    reporters: ['progress','html', 'coverage'],
     htmlReporter: {
         outputFile: './../reports/karma_test_results.html',
         // Optional
@@ -40,6 +41,12 @@ module.exports = function(config) {
         groupSuites: true,
         useCompactStyle: true,
         useLegacyStyle: true
+    },
+
+    coverageReporter: {
+      dir: '../reports/coverage/karma/',
+      subdir: '.'
+      // Would output the results into: .'../reports/coverage/'
     },
 
     // web server port
